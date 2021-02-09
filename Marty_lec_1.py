@@ -29,7 +29,16 @@ answered, but can instead be described in terms of smaller occurrences of the sa
 Key Idea - In a recursive piece of code, you handle a small part of the overall task yourself, then 
 make a recursive call to handle the rest 
 
-
+def printStars(n):
+	if (?):
+		// base case
+		// easy to solve
+		// do it ourselves 
+	else: 
+		// recursive case 
+		// hard to solve
+		// ask for "help"
+		// make calls to ourself
 
 '''
 
@@ -39,7 +48,13 @@ def printStars(n):
 		return
 	# recursive case : print one star at a time
 	else:
-		print "*"
+		print "*",
 		printStars(n-1)
 
 printStars(5)
+
+
+def power(base, exp):
+	pass 
+
+power(2, 4)
