@@ -40,6 +40,9 @@ def printStars(n):
 		// ask for "help"
 		// make calls to ourself
 
+One condition on the recursive function is that i cannot pass the exact same values to it, i must CHIP
+away at it. chip off a small chunk and let it handle the rest. 
+
 '''
 
 def printStars(n):
@@ -55,6 +58,25 @@ printStars(5)
 
 
 def power(base, exp):
-	pass 
+	if exp == 0: # base case 
+		return 1
+	else:  # Recursive Case 
+		return base*power(base, exp-1)
 
-power(2, 4)
+print power(0, 4)
+
+
+def isPalindrome(s):
+	# base case 
+	if len(s) <= 1:
+		return True 
+	# recursive case 
+	else:
+		first = s[0]
+		last = s[-1]
+		if first == last:
+			return isPalindrome(s[1:-1])
+		else:
+			return False
+
+print isPalindrome("abba")
