@@ -14,6 +14,7 @@ Recursive Case -  ??
  	using div/mod operations. 
 
 
+Binary of 43 = Binary of 21 (43/2) + Binary of 1 (43%2)
 
 '''
 
@@ -27,3 +28,14 @@ def printBinary(n): # 2
 		print lastdigit, # "1 1 0"
 
 printBinary(3) 
+
+def reverseLines(lines):
+	# base case
+	if len(lines) == 1:
+		print lines[0]
+	# recursive case 
+	else:
+		print lines[-1]
+		reverseLines(lines[:-1])
+
+reverseLines(["hello", "line2", "line3", "line4"]) 
