@@ -1,2 +1,8 @@
 bilibili.com/video/BV1B4411W7Ld?p=11&spm_id_from=pageDriver 
 
+Growth Rate leads to run-time 
+
+N =  size of data 
+
+so O(1) = means that the operation has nothing to with the size of the data. Hence, this is very scalable for LARGE data inputs/management.
+
