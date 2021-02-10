@@ -39,3 +39,24 @@ def reverseLines(lines):
 		reverseLines(lines[:-1])
 
 reverseLines(["hello", "line2", "line3", "line4"]) 
+
+
+# classic recursion implementation
+def crawl(path, indent):
+	# base case
+	if os.path.isfile(path):
+		print path 
+	# recursive case 
+	else: 
+
+
+
+
+
+import os
+absolute_path = os.path.abspath("ebikes.txt")
+print("Full path: " + absolute_path)
+dir_path = os.path.dirname(absolute_path)
+print("Directory Path: " + dir_path) #  /Users/tanvi/Desktop/work_2_win
+crawl(dir_path)
+
