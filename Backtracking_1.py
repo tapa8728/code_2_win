@@ -30,7 +30,7 @@ Chip away at the digits --- drive it to the base case
 def printBinary(digits):
 	prefix = ""
 	#_printBinary(digits, prefix)
-	_pBinary(digits, prefix)
+	_pBinary(digits, prefix, "") #indent added 
 
 def _printBinary(digits, prefix):
 	# base case 
@@ -57,14 +57,41 @@ def _printBinary(digits, prefix):
 	
 
 # succint version
-def _pBinary(digits, prefix):
+def _pBinary(digits, prefix, indent):
+	print indent, "_pBinary(", digits, ",", prefix, ")"
 	if digits == 0:
-		print prefix
+		print indent, prefix
 	else:
 		# choose 
 		# explore
-		_pBinary(digits-1, prefix + "0") # local function variables take care of the choosing/unchoosing
-		_pBinary(digits-1, prefix + "1")
+		_pBinary(digits-1, prefix + "0", indent + "	") # local function variables take care of the choosing/unchoosing
+		_pBinary(digits-1, prefix + "1", indent + "	")
 		# unchoose 
 
 printBinary(3)
+
+'''
+_pBinary( 3 ,  )
+	_pBinary( 2 , 0 )
+		_pBinary( 1 , 00 )
+			_pBinary( 0 , 000 )
+			000
+			_pBinary( 0 , 001 )
+			001
+		_pBinary( 1 , 01 )
+			_pBinary( 0 , 010 )
+			010
+			_pBinary( 0 , 011 )
+			011
+	_pBinary( 2 , 1 )
+		_pBinary( 1 , 10 )
+			_pBinary( 0 , 100 )
+			100
+			_pBinary( 0 , 101 )
+			101
+		_pBinary( 1 , 11 )
+			_pBinary( 0 , 110 )
+			110
+			_pBinary( 0 , 111 )
+			111
+'''
