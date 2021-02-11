@@ -29,7 +29,8 @@ Chip away at the digits --- drive it to the base case
 
 def printBinary(digits):
 	prefix = ""
-	_printBinary(digits, prefix)
+	#_printBinary(digits, prefix)
+	_pBinary(digits, prefix)
 
 def _printBinary(digits, prefix):
 	# base case 
@@ -53,6 +54,17 @@ def _printBinary(digits, prefix):
 		#unchoose 1
 		prefix_1 = prefix
 		digits = digits+1 
-		
+	
+
+# succint version
+def _pBinary(digits, prefix):
+	if digits == 0:
+		print prefix
+	else:
+		# choose 
+		# explore
+		_pBinary(digits-1, prefix + "0") # local function variables take care of the choosing/unchoosing
+		_pBinary(digits-1, prefix + "1")
+		# unchoose 
 
 printBinary(3)
