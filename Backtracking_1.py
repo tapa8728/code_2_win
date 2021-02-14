@@ -95,3 +95,21 @@ _pBinary( 3 ,  )
 			_pBinary( 0 , 111 )
 			111
 '''
+
+print "-----------------"
+
+'''
+Write a recursive function printDecimal that accepts an integer number of digits and prints all 
+base-10 numbers that have exactly that many digits, in ascending order, one per line.
+'''
+
+def printDecimal(digits, prefix):
+	# base case
+	if : 
+		pass
+	else:  # recursive case 
+		#choose
+		#explore 
+		#unchoose 
+
+printDecimal(3, "")
