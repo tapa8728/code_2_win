@@ -34,3 +34,36 @@ def diceRoll(dice, chosen):
 		 #Unchoose
 
 diceRoll(2, [])
+
+
+print "-----------"
+
+'''
+Write a recursive function diceSUm() that accepts the number of 6-sided dice and print a list of 
+all combinations that add upto a specific input "s" -sum. 
+
+Eg:  diceSum(3, 10)
+output : [ (2,2,4), (1,4,5) .. etc ]
+
+'''
+
+def diceSum(dice, total, chosen):
+	if len(chosen) == dice:
+		if sum(chosen) == total: #base case
+			print chosen
+	else:  #recursive case 
+		# choose
+		# explore
+		diceSum(dice, total, chosen + [1])
+		diceSum(dice, total, chosen + [2])
+		diceSum(dice, total, chosen + [3])
+		diceSum(dice, total, chosen + [4])
+		diceSum(dice, total, chosen + [5])
+		diceSum(dice, total, chosen + [6])
+		# unchoose
+
+diceSum(2, 10, [])
+
+
+
+
