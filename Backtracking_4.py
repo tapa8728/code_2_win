@@ -10,7 +10,6 @@ def permuteName(name, chosen, res):
 
 		# explore
 		for i in xrange(len(name)):
-
 			permuteName(name[:i]+name[i+1:], chosen + [name[i]], res )
 
 		# unchoose 
