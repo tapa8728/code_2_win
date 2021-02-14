@@ -105,11 +105,21 @@ base-10 numbers that have exactly that many digits, in ascending order, one per 
 
 def printDecimal(digits, prefix):
 	# base case
-	if : 
-		pass
+	if digits == 0: 
+		print prefix + ", ",
 	else:  # recursive case 
 		#choose
 		#explore 
+		printDecimal(digits-1, prefix + "0")
+		printDecimal(digits-1, prefix + "1")
+		printDecimal(digits-1, prefix + "2")
+		printDecimal(digits-1, prefix + "3")
+		printDecimal(digits-1, prefix + "4")
+		printDecimal(digits-1, prefix + "5")
+		printDecimal(digits-1, prefix + "6")
+		printDecimal(digits-1, prefix + "7")
+		printDecimal(digits-1, prefix + "8")
+		printDecimal(digits-1, prefix + "9")
 		#unchoose 
 
-printDecimal(3, "")
+printDecimal(2, "")
