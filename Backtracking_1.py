@@ -101,6 +101,11 @@ print "-----------------"
 '''
 Write a recursive function printDecimal that accepts an integer number of digits and prints all 
 base-10 numbers that have exactly that many digits, in ascending order, one per line.
+
+
+There are many calls here to be made at a single level. Each call is going to handle a decision to be made. 
+Hence, we can use a For-loop to make those calls. We are NOT using a for-loop to solve the actual 
+problem. That will be done by recursion 
 '''
 
 def printDecimal(digits, prefix):
